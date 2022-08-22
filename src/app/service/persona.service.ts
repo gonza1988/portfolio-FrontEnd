@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas'; /*esta URL es la genérica. Luego le concatenaremos mediante metodos, los crear, editar,borrar ,etc */
+  URL = 'https://backendcozzo.herokuapp.com/personas'; /*esta URL es la genérica. Luego le concatenaremos mediante metodos, los crear, editar,borrar ,etc */
 
 
   constructor(private http: HttpClient) { }
