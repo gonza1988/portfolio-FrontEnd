@@ -1,7 +1,9 @@
 <div class="row">
-    <div class= "col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/gonza-image.jpeg" alt="imagen-perfil" class="img-fluid" id="fotoPerfil">
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img src={{persona.img}} alt="imagen-perfil" class="img-fluid" id="fotoPerfil">
     </div>
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre" class="color">{{persona.nombre}} {{persona.apellido}}</p>
         <p>Full Stack Developer Jr</p>
@@ -10,13 +12,16 @@
         <span>
             <h1 class="color">Acerca de mi</h1>
             <p><strong class="color">Bienvenid@! Mi nombre
-                es Gonzalo Cozzo y soy desarrollador
-                Full-Stack.</strong> Soy un programador que ama el back-end y que ha decidido sazonar sus
-                conocimientos con algo de front para darle sabor.
-                Actualmente me encuentro cursando la 2da etapa de Argentina-Programa y participando en el proyecto
-                Oracle One en Alura Latam. Día a día trato de mejorar y aprender algo nuevo, por lo que también me
-                gusta mucho estudiar de manera autodidacta. Mi sueño es pertenecer a una empresa que continue
-                enseñándome, poniéndome a prueba constantemente y a la que pueda aportar mis conocimientos.</p>
+                    es Gonzalo Cozzo y soy desarrollador
+                    Full-Stack.</strong>{{persona.descripcion}}</p>
         </span>
     </div>
+
+
+    <div class="col-xs-2 col-sm-12 col-md-12 col-lg-2">
+        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+            Editar Persona
+        </button>
+    </div>
+
 </div>
